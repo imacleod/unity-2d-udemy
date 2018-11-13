@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68377188e2cdeac488a2e5700d5b8a6b, type: 3}
+  m_Name: Introduction
+  m_EditorClassIdentifier: 
+  nextStates:
+  - {fileID: 11400000, guid: 2da56e2146dbf3f48903ca54ddac1b9c, type: 2}
+  storyText: 'Welcome to Desert Island!
+
+
+    This is a choose your own adventure game where you are attempting to remember
+    how you got here. You will be presented with the story as it progresses and choices
+    that determine your path.
+
+
+    Press the number 1 key to select the first choice, the number 2 key to select
+    the second choice, etc. If you would like to exit the game press the escape key.
+
+
+    Press the 1 key to begin!'

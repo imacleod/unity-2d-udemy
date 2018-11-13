@@ -1,0 +1,31 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68377188e2cdeac488a2e5700d5b8a6b, type: 3}
+  m_Name: Chest
+  m_EditorClassIdentifier: 
+  nextStates:
+  - {fileID: 11400000, guid: 2da56e2146dbf3f48903ca54ddac1b9c, type: 2}
+  - {fileID: 11400000, guid: 2b2e55d0529e1484f94ed2b67949985a, type: 2}
+  storyText: 'Thankfully this chest is unlocked. You open it, noticing a scent of
+    rich mahogany. The chest contains a single item, a velvet bag that you quickly
+    untie.
+
+
+    In this bag is an autobiography that you begin to read. The more you read it the
+    more memories start flooding back. You remember who you are and how you got here.
+    At last, you have found peace.
+
+
+    What next?
+
+    1. Return to start and play again
+
+    2. Go to Game Over screen'

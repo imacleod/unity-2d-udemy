@@ -1,0 +1,5 @@
+You awake on the beach of a desert island with no memory of how you got there. The sun radiates heat at high noon while you regain your senses and realize the painful thirst that you're harboring. A quick survey of your immediate surroundings shows two items of interest; a rowboat on the beach and a small hut on the edge of the interior jungle.
+
+Which do you want to inspect?
+1. Rowboat
+2. Hut

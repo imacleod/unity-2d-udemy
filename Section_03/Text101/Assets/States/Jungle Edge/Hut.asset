@@ -1,0 +1,26 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68377188e2cdeac488a2e5700d5b8a6b, type: 3}
+  m_Name: Hut
+  m_EditorClassIdentifier: 
+  nextStates:
+  - {fileID: 11400000, guid: 49191e91d13576b4aa5239ca0a9bfef8, type: 2}
+  - {fileID: 11400000, guid: e9fc49d5717705c4bb19e4ea302ca8ba, type: 2}
+  storyText: 'Entering the hut you see a simple desk to the left and a chest in the
+    back corner. Everything has a fine layer of dust on it; looks like this hut hasn''t
+    been used for a while.
+
+
+    What do you do?
+
+    1. Inspect the desk
+
+    2. Search the chest'

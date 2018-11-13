@@ -1,0 +1,22 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 68377188e2cdeac488a2e5700d5b8a6b, type: 3}
+  m_Name: Start
+  m_EditorClassIdentifier: 
+  nextStates:
+  - {fileID: 11400000, guid: 14e9388f17ad8934e866cfa388fed3a8, type: 2}
+  - {fileID: 11400000, guid: 38da74e9b491a4847849ee60b1d68621, type: 2}
+  storyText: "You awake on the beach of a desert island with no memory of how you
+    got there. The sun radiates heat at high noon while you regain your senses and
+    realize the painful thirst that you're harboring.\n\nA quick survey of your immediate
+    surroundings shows two items of interest; a rowboat on the beach and a small hut
+    on the edge of the jungle interior.\r\n\r\nWhich do you want to inspect?\r\n1.
+    Rowboat\r\n2. Hut"
