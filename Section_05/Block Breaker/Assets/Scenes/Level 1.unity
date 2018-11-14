@@ -633,6 +633,7 @@ GameObject:
   - component: {fileID: 1107995566}
   - component: {fileID: 1107995565}
   - component: {fileID: 1107995567}
+  - component: {fileID: 1107995568}
   m_Layer: 0
   m_Name: Paddle
   m_TagString: Untagged
@@ -693,7 +694,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1107995564}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 8, y: 0.5, z: 0}
+  m_LocalPosition: {x: 8, y: 0.25, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -730,6 +731,18 @@ PolygonCollider2D:
       - {x: 1, y: -0.25}
       - {x: 1, y: 0.048057675}
       - {x: 0.8062639, y: 0.13023937}
+--- !u!114 &1107995568
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1107995564}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a904a6e81378e814ab6f8b7e29485751, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  screenWidthInUnits: 16
 --- !u!1 &1430542736
 GameObject:
   m_ObjectHideFlags: 0
@@ -925,7 +938,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1836767002
 RectTransform:
   m_ObjectHideFlags: 0
