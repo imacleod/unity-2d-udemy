@@ -1,13 +1,24 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Ball : MonoBehaviour {
     // Configuration
+    [SerializeField] float launchVelX = 2f;
+    [SerializeField] float launchVelY = 15f;
     [SerializeField] Paddle paddle1;
 
     // State
     Vector2 ballOffset;
+    bool hasLaunched = false;
+
+    // Ball follows paddle at offset
+    private void LockToPaddle()
+    {
+        Vector2 paddlePos = new Vector2(paddle1.transform.position.x, paddle1.transform.position.y);
+        transform.position = paddlePos + ballOffset;
+    }
 
 	// Initialization
 	void Start () {
@@ -15,9 +26,21 @@ public class Ball : MonoBehaviour {
 	}
 	
 	// Called once per frame
-	void Update () {
-        // Ball follows paddle at offset
-        Vector2 paddlePos = new Vector2(paddle1.transform.position.x, paddle1.transform.position.y);
-        transform.position = paddlePos + ballOffset;
-	}
+	void Update ()
+    {
+        if (!hasLaunched)
+        {
+            LockToPaddle();
+            LaunchOnMouseClick();
+        }
+    }
+
+    private void LaunchOnMouseClick()
+    {
+        if (Input.GetMouseButtonDown(0))
+        {
+            GetComponent<Rigidbody2D>().velocity = new Vector2(launchVelX, launchVelY);
+            hasLaunched = true;
+        }
+    }
 }
