@@ -5,6 +5,7 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour {
     // Configuration
+    [SerializeField] AudioClip[] ballSounds;
     [SerializeField] float launchVelX = 2f;
     [SerializeField] float launchVelY = 15f;
     [SerializeField] Paddle paddle1;
@@ -12,6 +13,9 @@ public class Ball : MonoBehaviour {
     // State
     Vector2 ballOffset;
     bool hasLaunched = false;
+
+    // Cached component references
+    AudioSource ballAudioSource;
 
     private void LaunchOnMouseClick()
     {
@@ -33,12 +37,13 @@ public class Ball : MonoBehaviour {
     {
         if (hasLaunched)
         {
-            GetComponent<AudioSource>().Play();
+            ballAudioSource.PlayOneShot(ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)]);
         }
     }
 
 	// Initialization
 	void Start () {
+        ballAudioSource = GetComponent<AudioSource>();
         ballOffset = transform.position - paddle1.transform.position;
 	}
 	
