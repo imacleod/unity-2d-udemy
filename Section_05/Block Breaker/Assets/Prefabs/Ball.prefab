@@ -187,7 +187,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ballSounds:
   - {fileID: 8300000, guid: 9b8119314539ea6419f7b132e512b556, type: 3}
-  - {fileID: 8300000, guid: 22fae6c2a0c301642ad6f5670881cdde, type: 3}
+  - {fileID: 8300000, guid: badd25f5e2ac75248b28468efb8a51bc, type: 3}
   launchVelX: 2
   launchVelY: 15
   paddle1: {fileID: 0}
