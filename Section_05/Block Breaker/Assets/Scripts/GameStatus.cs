@@ -18,6 +18,20 @@ public class GameStatus : MonoBehaviour {
         scoreText.text = currentScore.ToString();
     }
 
+    private void Awake()
+    {
+        // Singleton pattern for game status persistence across levels
+        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        if (gameStatusCount > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
+    }
+
     private void Start()
     {
         scoreText.text = currentScore.ToString();
