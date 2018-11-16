@@ -5,7 +5,16 @@ using UnityEngine;
 public class Level : MonoBehaviour {
     [SerializeField] int breakableBlocks; // debugging
 
-    public void countBreakableBlocks()
+    public void BlockDestroyed()
+    {
+        breakableBlocks--;
+        if (breakableBlocks <= 0)
+        {
+            FindObjectOfType<SceneLoader>().LoadNextScene();
+        }
+    }
+
+    public void IncrementBreakableBlocks()
     {
         breakableBlocks++;
     }
