@@ -78,6 +78,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5658730cac8f66b488ea2a8e4ee4df4b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  blockParticleVFX: {fileID: 100000, guid: 7d846c02296ef4dc4abff04ce3e5262c, type: 2}
   breakSound: {fileID: 8300000, guid: 22fae6c2a0c301642ad6f5670881cdde, type: 3}
 --- !u!212 &212831240403519178
 SpriteRenderer:
