@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using TMPro;
 
-public class GameStatus : MonoBehaviour {
+public class GameSession : MonoBehaviour {
     // Configuration
     [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
     [SerializeField] int blockDestroyedPoints = 5;
@@ -21,15 +21,21 @@ public class GameStatus : MonoBehaviour {
     private void Awake()
     {
         // Singleton pattern for game status persistence across levels
-        int gameStatusCount = FindObjectsOfType<GameStatus>().Length;
+        int gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if (gameStatusCount > 1)
         {
-            Destroy(gameObject);
+            //Destroy(gameObject);
+            ResetGame();
         }
         else
         {
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    public void ResetGame()
+    {
+        Destroy(gameObject);
     }
 
     private void Start()
