@@ -3,19 +3,19 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Level : MonoBehaviour {
-    [SerializeField] int breakableBlocks; // debugging
+    [SerializeField] int blocksTotal; // debugging
 
     public void BlockDestroyed()
     {
-        breakableBlocks--;
-        if (breakableBlocks <= 0)
+        blocksTotal--;
+        if (blocksTotal <= 0)
         {
             FindObjectOfType<SceneLoader>().LoadNextScene();
         }
     }
 
-    public void IncrementBreakableBlocks()
+    public void CountBlocks()
     {
-        breakableBlocks++;
+        blocksTotal++;
     }
 }

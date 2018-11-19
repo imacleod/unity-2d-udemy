@@ -495,6 +495,10 @@ Prefab:
       propertyPath: m_Name
       value: Block (7)
       objectReference: {fileID: 0}
+    - target: {fileID: 1994665208645102, guid: 493f474312c5c8e40b68af8653020adb, type: 2}
+      propertyPath: m_TagString
+      value: Breakable
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493f474312c5c8e40b68af8653020adb, type: 2}
   m_IsPrefabAsset: 0
