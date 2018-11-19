@@ -25,7 +25,8 @@ public class GameSession : MonoBehaviour {
         int gameStatusCount = FindObjectsOfType<GameSession>().Length;
         if (gameStatusCount > 1)
         {
-            //Destroy(gameObject);
+            // Deactivate object before destruction to prevent execution order related bugs
+            gameObject.SetActive(false);
             ResetGame();
         }
         else
