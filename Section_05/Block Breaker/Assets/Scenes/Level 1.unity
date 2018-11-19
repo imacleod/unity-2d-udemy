@@ -499,6 +499,11 @@ Prefab:
       propertyPath: m_TagString
       value: Breakable
       objectReference: {fileID: 0}
+    - target: {fileID: 114973349080509592, guid: 493f474312c5c8e40b68af8653020adb,
+        type: 2}
+      propertyPath: maxHits
+      value: 3
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 493f474312c5c8e40b68af8653020adb, type: 2}
   m_IsPrefabAsset: 0
