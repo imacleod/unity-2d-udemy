@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class Ball : MonoBehaviour {
     // Configuration
@@ -9,6 +6,7 @@ public class Ball : MonoBehaviour {
     [SerializeField] float launchVelX = 2f;
     [SerializeField] float launchVelY = 15f;
     [SerializeField] Paddle paddle1;
+    [SerializeField] float randomForce = 0.2f;
 
     // State
     Vector2 ballOffset;
@@ -16,12 +14,13 @@ public class Ball : MonoBehaviour {
 
     // Cached component references
     AudioSource ballAudioSource;
+    Rigidbody2D rigidBody2D;
 
     private void LaunchOnMouseClick()
     {
         if (Input.GetMouseButtonDown(0))
         {
-            GetComponent<Rigidbody2D>().velocity = new Vector2(launchVelX, launchVelY);
+            rigidBody2D.velocity = new Vector2(launchVelX, launchVelY);
             hasLaunched = true;
         }
     }
@@ -35,16 +34,19 @@ public class Ball : MonoBehaviour {
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Vector2 randomVelocityForce = new Vector2(Random.Range(0f, randomForce), Random.Range(0f, randomForce));
         if (hasLaunched)
         {
-            ballAudioSource.PlayOneShot(ballSounds[UnityEngine.Random.Range(0, ballSounds.Length)]);
+            ballAudioSource.PlayOneShot(ballSounds[Random.Range(0, ballSounds.Length)]);
+            rigidBody2D.velocity += randomVelocityForce;
         }
     }
 
 	// Initialization
 	void Start () {
         ballAudioSource = GetComponent<AudioSource>();
-        ballOffset = transform.position - paddle1.transform.position;
+        ballOffset = transform.position - paddle1.transform.position;  // Position ball above paddle
+        rigidBody2D = GetComponent<Rigidbody2D>();
 	}
 	
 	// Called once per frame
