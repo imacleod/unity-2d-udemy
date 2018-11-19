@@ -7,6 +7,7 @@ public class GameSession : MonoBehaviour {
     // Configuration
     [Range(0.1f, 10f)] [SerializeField] float gameSpeed = 1f;
     [SerializeField] int blockDestroyedPoints = 5;
+    [SerializeField] bool isAutoPlayEnabled;
     [SerializeField] TextMeshProUGUI scoreText;
 
     // State
@@ -31,6 +32,11 @@ public class GameSession : MonoBehaviour {
         {
             DontDestroyOnLoad(gameObject);
         }
+    }
+
+    public bool IsAutoPlayEnabled()
+    {
+        return isAutoPlayEnabled;
     }
 
     public void ResetGame()
