@@ -1,27 +1,42 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class Player : MonoBehaviour {
     // Configuration
     [SerializeField] float moveSpeed = 10f;
+    [SerializeField] float playerPadding = 1f;
+    float xMax;
+    float xMin;
+    float yMax;
+    float yMin;
 
     private void Move()
     {
         var deltaX = Input.GetAxis("Horizontal") * Time.deltaTime * moveSpeed;
         var deltaY = Input.GetAxis("Vertical") * Time.deltaTime * moveSpeed;
-        var newPosX = transform.position.x + deltaX;
-        var newPosY = transform.position.y + deltaY;
+        var newPosX = Mathf.Clamp(transform.position.x + deltaX, xMin, xMax);
+        var newPosY = Mathf.Clamp(transform.position.y + deltaY, yMin, yMax);
         transform.position = new Vector2(newPosX, newPosY);
     }
 
 	// Initialization
 	void Start () {
-		
+		SetUpMoveBoundaries();
 	}
-	
-	// Called once per frame
-	void Update () {
+
+    private void SetUpMoveBoundaries()
+    {
+        Camera gameCamera = Camera.main;
+        xMax = gameCamera.ViewportToWorldPoint(new Vector3(1, 0, 0)).x - playerPadding;
+        xMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).x + playerPadding;
+        yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - playerPadding;
+        yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + playerPadding;
+    }
+
+    // Called once per frame
+    void Update () {
 		Move();
 	}
 }
