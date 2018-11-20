@@ -5,10 +5,12 @@ using UnityEngine;
 
 public class Player : MonoBehaviour {
     // Configuration
+    Coroutine firingCoroutine;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float laserSpeed = 20f;
     [SerializeField] float moveSpeed = 10f;
     [SerializeField] float playerPadding = 1f;
+    [SerializeField] float projectileFiringPeriod = 0.1f;
     float xMax;
     float xMin;
     float yMax;
@@ -18,8 +20,21 @@ public class Player : MonoBehaviour {
     {
         if (Input.GetButtonDown("Fire1"))
         {
+            firingCoroutine = StartCoroutine(FireContinuously());
+        }
+        else if (Input.GetButtonUp("Fire1"))
+        {
+            StopCoroutine(firingCoroutine);
+        }
+    }
+
+    private IEnumerator FireContinuously()
+    {
+        while (true)
+        {
             GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
             laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, laserSpeed);
+            yield return new WaitForSeconds(projectileFiringPeriod);
         }
     }
 
@@ -32,11 +47,6 @@ public class Player : MonoBehaviour {
         transform.position = new Vector2(newPosX, newPosY);
     }
 
-	// Initialization
-	void Start () {
-		SetUpMoveBoundaries();
-	}
-
     private void SetUpMoveBoundaries()
     {
         Camera gameCamera = Camera.main;
@@ -45,6 +55,11 @@ public class Player : MonoBehaviour {
         yMax = gameCamera.ViewportToWorldPoint(new Vector3(0, 1, 0)).y - playerPadding;
         yMin = gameCamera.ViewportToWorldPoint(new Vector3(0, 0, 0)).y + playerPadding;
     }
+
+	// Initialization
+	void Start () {
+		SetUpMoveBoundaries();
+	}
 
     // Called once per frame
     void Update () {
