@@ -6,10 +6,12 @@ public class EnemyPath : MonoBehaviour {
     // Configuration
     int waypointIndex = 0;
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] List<Transform> waypoints;
+    [SerializeField] WaveConfig waveConfig;
+    List<Transform> waypoints;
 
     void Start()
     {
+        waypoints = waveConfig.GetWaypoints();
         transform.position = waypoints[0].transform.position;
     }
 
