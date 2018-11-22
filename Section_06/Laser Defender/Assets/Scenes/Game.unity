@@ -394,9 +394,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31c0ebff495ba0440a98a511f00f6bca, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  startWave: 0
   waveConfigs:
   - {fileID: 11400000, guid: a39040c9f67b7dd4db25acb55772d26b, type: 2}
   - {fileID: 11400000, guid: 26c905c17f68e6f419a564207079726c, type: 2}
+  - {fileID: 11400000, guid: 7e3395efde36c374d89cd1e0dcf13be9, type: 2}
+  - {fileID: 11400000, guid: 09f3db90aed65304a9d0847f01cf2bc4, type: 2}
 --- !u!4 &1776626283
 Transform:
   m_ObjectHideFlags: 0
