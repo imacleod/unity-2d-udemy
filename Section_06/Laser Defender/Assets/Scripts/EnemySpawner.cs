@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class EnemySpawner : MonoBehaviour {
     // Configuration
+    [SerializeField] bool loopWaves = false;
     [SerializeField] int startWave = 0;
     [SerializeField] List<WaveConfig> waveConfigs;
 
@@ -30,7 +31,11 @@ public class EnemySpawner : MonoBehaviour {
     }
 
 	// Initialization
-	void Start () {
-        StartCoroutine(SpawnAllWaves());
+	IEnumerator Start () {
+        do
+        {
+            yield return StartCoroutine(SpawnAllWaves());
+        }
+        while (loopWaves);
 	}
 }

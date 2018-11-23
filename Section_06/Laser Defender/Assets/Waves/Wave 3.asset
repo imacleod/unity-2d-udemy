@@ -11,7 +11,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4788ad14192e8349bd8c85939c29bfc, type: 3}
   m_Name: Wave 3
   m_EditorClassIdentifier: 
-  enemyCount: 5
+  enemyCount: 3
   enemyPrefab: {fileID: 1860793312835738, guid: 1c83b8bdb1fbcb34ea3e903a9f8e8acd,
     type: 2}
   moveSpeed: 8
