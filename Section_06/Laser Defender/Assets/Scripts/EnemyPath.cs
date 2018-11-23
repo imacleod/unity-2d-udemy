@@ -8,17 +8,6 @@ public class EnemyPath : MonoBehaviour {
     WaveConfig waveConfig;
     List<Transform> waypoints;
 
-    void Start()
-    {
-        waypoints = waveConfig.GetWaypoints();
-        transform.position = waypoints[0].transform.position;
-    }
-
-    void Update()
-    {
-        Move();
-    }
-
     private void Move()
     {
         if (waypointIndex <= waypoints.Count - 1)
@@ -43,5 +32,16 @@ public class EnemyPath : MonoBehaviour {
     public void SetWaveConfig(WaveConfig config)
     {
         this.waveConfig = config;
+    }
+
+    void Start()
+    {
+        waypoints = waveConfig.GetWaypoints();
+        transform.position = waypoints[0].transform.position;
+    }
+
+    void Update()
+    {
+        Move();
     }
 }
