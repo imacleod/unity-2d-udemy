@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     // Configuration
+    [SerializeField] GameObject deathVFX;
+    [SerializeField] float explosionDuration = 1f;
     [SerializeField] int health = 100;
     [SerializeField] GameObject laserPrefab;
     [SerializeField] float laserSpeed = 10f;
@@ -28,8 +30,15 @@ public class Enemy : MonoBehaviour {
         damageDealer.Hit();
         if (health <= 0)
         {
-            Destroy(gameObject);
+            Die();
         }
+    }
+
+    private void Die()
+    {
+        GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
+        Destroy(explosion, explosionDuration);
+        Destroy(gameObject);
     }
 
     private void Fire()

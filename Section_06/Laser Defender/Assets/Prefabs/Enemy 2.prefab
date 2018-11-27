@@ -69,6 +69,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ee3a945ad4554f893295888496d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathVFX: {fileID: 1994559871422642, guid: c5b4e810d2b47d644bfeeb030d0a6990, type: 2}
+  explosionDuration: 1
   health: 100
   laserPrefab: {fileID: 1409548962383782, guid: 2d1b816e14800a44e9de733ab2636821,
     type: 2}
