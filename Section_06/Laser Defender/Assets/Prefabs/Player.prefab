@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212028287997364928}
   - component: {fileID: 114897169396947966}
   - component: {fileID: 60107590617198050}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: Player
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -67,8 +67,8 @@ PolygonCollider2D:
   m_Points:
     m_Paths:
     - - {x: 0.49499997, y: 0.125}
-      - {x: 0.275, y: 0.105}
-      - {x: 0.125, y: 0.235}
+      - {x: 0.3395659, y: 0.012763023}
+      - {x: 0.16189492, y: 0.14276314}
       - {x: 0.13499999, y: 0.375}
       - {x: -0.105, y: 0.375}
       - {x: -0.145, y: 0.125}
