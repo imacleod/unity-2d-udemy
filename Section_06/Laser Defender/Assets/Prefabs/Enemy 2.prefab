@@ -69,11 +69,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e2ee3a945ad4554f893295888496d7a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  deathSFX: {fileID: 8300000, guid: 224aea8238e2a82408878349c582afdb, type: 3}
+  deathSFXVolume: 0.75
   deathVFX: {fileID: 1994559871422642, guid: c5b4e810d2b47d644bfeeb030d0a6990, type: 2}
   explosionDuration: 1
   health: 100
   laserPrefab: {fileID: 1409548962383782, guid: 2d1b816e14800a44e9de733ab2636821,
     type: 2}
+  laserSFX: {fileID: 8300000, guid: 2c539d106db8a9a43bd579cff7acb0a5, type: 3}
+  laserSFXVolume: 0.5
   laserSpeed: 10
   minTimeBetweenShots: 0.2
   maxTimeBetweenShots: 3

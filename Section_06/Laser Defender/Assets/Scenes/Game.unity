@@ -152,6 +152,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 1320894284153270, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_Name
+      value: Laser Destroyer Top
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
   m_IsPrefabAsset: 0
@@ -426,6 +430,52 @@ Prefab:
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6b76e0cf653e08f40bf6f78b0ce81a24, type: 2}
+  m_IsPrefabAsset: 0
+--- !u!1001 &1918824373
+Prefab:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalPosition.x
+      value: -5.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalPosition.y
+      value: -15.02
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4342059621437078, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 1320894284153270, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
+      propertyPath: m_Name
+      value: Laser Destroyer Bottom
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: ef700fa683002544aa92df0c52f4cb65, type: 2}
   m_IsPrefabAsset: 0
 --- !u!1001 &1936678762
 Prefab:

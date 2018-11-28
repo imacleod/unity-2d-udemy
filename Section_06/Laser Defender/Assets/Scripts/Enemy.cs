@@ -4,10 +4,17 @@ using UnityEngine;
 
 public class Enemy : MonoBehaviour {
     // Configuration
+    [Header("Attributes")]
+    [SerializeField] AudioClip deathSFX;
+    [SerializeField] [Range(0, 1)] float deathSFXVolume = 0.75f;
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
     [SerializeField] int health = 100;
+
+    [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
+    [SerializeField] AudioClip laserSFX;
+    [SerializeField] [Range(0, 1)] float laserSFXVolume = 0.75f;
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
@@ -36,6 +43,7 @@ public class Enemy : MonoBehaviour {
 
     private void Die()
     {
+        AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSFXVolume);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion, explosionDuration);
         Destroy(gameObject);
@@ -43,6 +51,7 @@ public class Enemy : MonoBehaviour {
 
     private void Fire()
     {
+        AudioSource.PlayClipAtPoint(laserSFX, Camera.main.transform.position, laserSFXVolume);
         GameObject laser = Instantiate(laserPrefab, transform.position, Quaternion.identity);
         laser.GetComponent<Rigidbody2D>().velocity = new Vector2(0, -laserSpeed);  // invert laserSpeed to move down screen
     }
