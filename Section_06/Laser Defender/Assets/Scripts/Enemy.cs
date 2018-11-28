@@ -10,6 +10,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField] GameObject deathVFX;
     [SerializeField] float explosionDuration = 1f;
     [SerializeField] int health = 100;
+    [SerializeField] int scoreValue = 100;
 
     [Header("Projectile")]
     [SerializeField] GameObject laserPrefab;
@@ -43,6 +44,7 @@ public class Enemy : MonoBehaviour {
 
     private void Die()
     {
+        FindObjectOfType<GameSession>().IncreaseScore(scoreValue);
         AudioSource.PlayClipAtPoint(deathSFX, Camera.main.transform.position, deathSFXVolume);
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion, explosionDuration);
