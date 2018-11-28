@@ -43,6 +43,7 @@ public class Player : MonoBehaviour {
         GameObject explosion = Instantiate(deathVFX, transform.position, transform.rotation);
         Destroy(explosion, explosionDuration);
         Destroy(gameObject);
+        FindObjectOfType<Level>().LoadGameOver();
     }
 
     private void Fire()
