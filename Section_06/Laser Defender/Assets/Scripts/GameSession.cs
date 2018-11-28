@@ -11,18 +11,6 @@ public class GameSession : MonoBehaviour {
         Singleton();
     }
 
-    private void Singleton()
-    {
-        if (FindObjectsOfType(GetType()).Length > 1)
-        {
-            Destroy(gameObject);
-        }
-        else
-        {
-            DontDestroyOnLoad(gameObject);
-        }
-    }
-
     public int GetScore () {
 		return score;
 	}
@@ -34,5 +22,17 @@ public class GameSession : MonoBehaviour {
     public void ResetGame()
     {
         Destroy(gameObject);
+    }
+
+    private void Singleton()
+    {
+        if (FindObjectsOfType(GetType()).Length > 1)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            DontDestroyOnLoad(gameObject);
+        }
     }
 }
