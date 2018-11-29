@@ -19,7 +19,7 @@ public class Enemy : MonoBehaviour {
     [SerializeField] float laserSpeed = 10f;
     [SerializeField] float minTimeBetweenShots = 0.2f;
     [SerializeField] float maxTimeBetweenShots = 3f;
-    [SerializeField] float shotCountdown;
+    float shotCountdown;
 
     private void CountDownAndShoot()
     {
